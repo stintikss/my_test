@@ -27,8 +27,8 @@
         .login input {
             background-color: #E7EEFE;
             border: #C7CDDA 1px solid;
-            width: 200px;
-            height: 20px;
+            width: 210px;
+            height: 25px;
             border-radius: 3px;
         }
 
@@ -74,13 +74,56 @@
         #login-avt {
             margin-top: 15px;
             background-color: #4f6fafdb;
-            width: 205px;
-            height: 20px;
+            width: 215px;
+            height: 25px;
             border: none;
             border-radius: 3px;
             color: #FFFFFF;
             font-family: "Roboto", sans-serif;
             font-size: 14px;
+        }
+
+        .forms1 {
+            width: 300px;
+            height: 165px;
+            margin: 20px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Добавляем направление столбцом */
+            text-align: center; /* Выравниваем текст по центру */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #create-acc {
+            background-color: #91ce6f;
+            color: #FFFFFF;
+            border: none;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+        }
+
+        #create-acc-buis {
+            background-color: #FFFFFF;
+            color: #4464A5;
+            border: #4464A5 1px solid;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        #reg p {
+            font-size: 11px;
+            margin-top: 12px;
+            font-family: "Montserrat", serif;
+            color: #9EA4AD;
+        }
+
+        #reg span {
+            color: #666D78;
         }
     </style>
 
@@ -95,29 +138,16 @@
         <button id="login-avt">Вход</button>
         <!-- <a id="toRegistration">Регистрация</a> -->
     </div> 
-    
-    <div id="registration" class="registration">
-        <p>Регистрация</p>
-        <input type="text" placeholder="Логин" required>
-        <input type="password" placeholder="Пароль" min="5" max="20">
-        <button>Зарегистрироваться</button>
-        <a id="toLogin">Войти</a>
-    </div>
+</div>
+
+<div class="forms1">
+    <div id="reg" class="reg">
+        <button id="create-acc">Создать аккаунт</button>
+        <button id="create-acc-buis">Создать страницу для бизнеса</button>
+        <p>После регистрации вы получите доступ <br>ко всем возможностям Connect ID <br><span>Узнать больше</span></p>
+    </div> 
 </div>
         
     <script>
-        const login = document.getElementById('login');
-        const registration = document.getElementById('registration');
-        document.getElementById('toRegistration').addEventListener('click', function(){
-            login.style.display = 'none';
-            registration.style.display = 'flex';
-        });
-        document.getElementById('toLogin').addEventListener('click', function(){
-            login.style.display = 'flex';
-            registration.style.display = 'none';
-        });
-
-
-        
     </script>
 </html>
