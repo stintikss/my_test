@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -60,7 +66,7 @@
             font-size: 20px;
         }
 
-        .login img {
+        .icon-img {
             width: 48px;
             height: 48px;
             position: relative;
@@ -115,42 +121,135 @@
             margin-top: 5px;
         }
 
-        #reg p {
+        #reg p, #politika-next-loginn {
             font-size: 11px;
             margin-top: 12px;
             font-family: "Montserrat", serif;
             color: #9EA4AD;
         }
 
-        #reg span {
+        #reg span, #reg-formss span {
             color: #666D78;
         }
+
+        .reg-form {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 380px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .your-log {
+            position: relative;
+            top: -10px;
+            color: #616365;
+            font-family: "Montserrat", serif;
+            font-size: 13px;
+        }
+
+        #type-log {
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        #types-login {
+            background-color: #F3F3F3;
+            border: #C7CDDA 1px solid;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+            position: relative;
+            top: -10px;
+        }
+
+        #saves-log {
+            color: #5d5e60;
+            font-family: "Montserrat", serif;
+            font-size: 13.5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        #saves-log {
+            margin-left: 5px; /* Отступ от чекбокса */
+            text-align: left; /* Выровнять текст по левому краю */
+        }
+
+        #next-loginn {
+            background-color: #8BABEE;
+            border: none;
+            color: #FFFFFF;
+            width: 215px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+
+        #politika-next-loginn {
+            margin-top: 30px;
+        }
+
     </style>
 
 </head>
 <body>
 <div id="form" class="forms">
     <div id="login" class="login">
-        <img src="img/free-icon-linux-2333464 (1).png" alt="">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
         <p>Вход Connect</p>
-        <input type="text" placeholder="Логин" required>
+        <input id="login" type="text" placeholder="Логин" required>
         <input id="passwordd" type="password" placeholder="Пароль" min="5" max="20">
-        <button id="login-avt">Вход</button>
+        <button onclick="loginAvtBut()" id="login-avt">Вход</button>
         <!-- <a id="toRegistration">Регистрация</a> -->
     </div> 
 </div>
 
-<div class="forms1">
+<div id="form1" class="forms1">
     <div id="reg" class="reg">
-        <button onclick="registrations()" id="create-acc">Создать аккаунт</button>
+        <button onclick="registrationBut()" id="create-acc">Создать аккаунт</button>
         <button id="create-acc-buis">Создать страницу для бизнеса</button>
         <p>После регистрации вы получите доступ <br>ко всем возможностям Connect ID <br><span>Узнать больше</span></p>
     </div> 
 </div>
+
+<div class="reg-form" style="display: none;">
+    <div id="reg-formss" class="reg-formss">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p id="type-log">Придумайте логин</p>
+        <p class="your-log">Ваш логин будет <br>использоваться для входа в аккаунт</p>
+        <input type="text" id="types-login" placeholder="Введите логин">
+        
+        <div class="checkbox-container">
+            <input type="checkbox">
+            <a id="saves-log">Сохранить вход</a>
+        </div>
+
+        <button id="next-loginn">Продолжить</button>
+        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+    </div> 
+</div>
+
         
     <script>
-        function registrations() {
+
+
+        function loginAvtBut() {
+
+        }
+
+        function registrationBut() {
             document.getElementById('form').style.display = 'none'
+            document.getElementById('form1').style.display = 'none'
         }
     </script>
 </html>
