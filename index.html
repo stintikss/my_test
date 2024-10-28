@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EAEBEE;
+        }
+
+        .login {
+            /* background-color: #EAEBEE; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        
+        .login input {
+            background-color: #E7EEFE;
+            border: #C7CDDA 1px solid;
+            width: 200px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .registration {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #toRegistration, #toLogin {
+            cursor: pointer;
+        }
+
+        .forms {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 300px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .login p {
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+
+        }
+
+        .login img {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            top: 10px; /* Сместите картинку вниз на нужное количество пикселей */
+        }
+
+        #passwordd {
+            margin-top: 5px;
+        }
+
+        #login-avt {
+            margin-top: 15px;
+            background-color: #4f6fafdb;
+            width: 205px;
+            height: 20px;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="forms">
+    <div id="login" class="login">
+        <img src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p>Вход Connect</p>
+        <input type="text" placeholder="Логин" required>
+        <input id="passwordd" type="password" placeholder="Пароль" min="5" max="20">
+        <button id="login-avt">Вход</button>
+        <!-- <a id="toRegistration">Регистрация</a> -->
+    </div> 
+    
+    <div id="registration" class="registration">
+        <p>Регистрация</p>
+        <input type="text" placeholder="Логин" required>
+        <input type="password" placeholder="Пароль" min="5" max="20">
+        <button>Зарегистрироваться</button>
+        <a id="toLogin">Войти</a>
+    </div>
+</div>
+        
+    <script>
+        const login = document.getElementById('login');
+        const registration = document.getElementById('registration');
+        document.getElementById('toRegistration').addEventListener('click', function(){
+            login.style.display = 'none';
+            registration.style.display = 'flex';
+        });
+        document.getElementById('toLogin').addEventListener('click', function(){
+            login.style.display = 'flex';
+            registration.style.display = 'none';
+        });
+
+
+        
+    </script>
+</html>
