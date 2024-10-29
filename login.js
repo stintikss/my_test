@@ -1,31 +1,34 @@
-function loginAvtBut() {
+document.addEventListener("DOMContentLoaded", function() {
+    const loginInput = document.getElementById("types-login");
+    const errorGood = document.getElementById("error-good");
+    const logEst = document.getElementById("log--est");
+    const englishError = document.getElementById("englishh-error");
 
-}
+    function validateLogin() {
+        const loginValue = loginInput.value;
 
-function registrationBut() {
-    document.getElementById('form').style.display = 'none'
-    document.getElementById('form1').style.display = 'none'
-    document.getElementById('form2').style.display = 'block'
-}
-
-function nextLogin() {
-    const login = document.getElementById('types-login').value;
-    const errorGood = document.getElementById('error-good');
-    const logEst = document.getElementById('log--est');
-    const noEnglish = document.getElementById('englishh-error');
-    const englishLettersRegex = /^[A-Za-z]+$/;
-
-    
-    errorGood.style.display = 'none';
-    logEst.style.display = 'none';
-    noEnglish.style.display = 'none';
-
-    if (login.length < 5) {
-        errorGood.style.display = 'block';
-    } else if (!englishLettersRegex.test(login)) {
-        noEnglish.style.display = 'block';
-    } else {
-        localStorage.setItem('savedLogin', login);
-        console.log('Логин корректен');   
+        if (loginValue.length < 5) {
+            errorGood.style.display = "block";
+            logEst.style.display = "none";
+            englishError.style.display = "none";
+        } else if (/[^a-zA-Z0-9]/.test(loginValue)) {
+            englishError.style.display = "block";
+            errorGood.style.display = "none";
+            logEst.style.display = "none";
+        } else {
+            errorGood.style.display = "none";
+            logEst.style.display = "none";
+            englishError.style.display = "none";
+        }
     }
-}
+
+    loginInput.addEventListener("input", function() {
+        errorGood.style.display = "none";
+        logEst.style.display = "none";
+        englishError.style.display = "none";
+    });
+
+    document.getElementById("next-loginn").addEventListener("click", function() {
+        validateLogin();
+    });
+});
