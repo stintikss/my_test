@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const errorGood = document.getElementById("error-good");
     const logEst = document.getElementById("log--est");
     const englishError = document.getElementById("englishh-error");
-    const form1 = document.getElementById('form1'); // изменил на 'form1' чтобы скрывать второй div
+    const form2 = document.getElementById('form2'); // изменил на 'form1' чтобы скрывать второй div
+    const form3 = document.getElementById('form3')
 
     // Условная функция для проверки валидности логина
     function validateLogin() {
@@ -30,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
             errorGood.style.display = "none";
             logEst.style.display = "none";
             englishError.style.display = "none";
-            form1.style.display = 'none'; // Скрыть форму при успешной валидации
+            localStorage.setItem(login, loginValue);
+            form2.style.display = 'none'; // Скрыть форму при успешной валидации
+            form3.style.display = 'block'
         }
     }
     
@@ -55,3 +58,5 @@ document.addEventListener("DOMContentLoaded", function() {
         validateLogin();
     });
 });
+
+
