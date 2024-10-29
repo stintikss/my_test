@@ -199,7 +199,7 @@
             margin-top: 30px;
         }
 
-        #error-good, #log--est, #englishh-error {
+        #error-good, #log--est, #englishh-error, #zero-simv {
             display: none;
             font-family: "Montserrat", serif;
             color: #ff6464;
@@ -235,13 +235,12 @@
 </head>
 <body>
 <div id="form" class="forms">
-    <div id="login" class="login">
+    <div class="login">
         <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
         <p>Вход Connect</p>
-        <input id="login" type="text" placeholder="Логин" required>
+        <input id="login-input" type="text" placeholder="Логин" required>
         <input id="passwordd" type="password" placeholder="Пароль" min="5" max="20">
         <button onclick="loginAvtBut()" id="login-avt">Вход</button>
-        <!-- <a id="toRegistration">Регистрация</a> -->
     </div> 
 </div>
 
@@ -254,7 +253,7 @@
 </div>
 
 <div id="form2" class="reg-form" style="display: none;">
-    <div id="reg-formss" class="reg-formss">
+    <div class="reg-formss">
         <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
         <p id="type-log">Придумайте логин</p>
         <p class="your-log">Ваш логин будет <br>использоваться для входа в аккаунт</p>
@@ -265,8 +264,9 @@
             <a id="saves-log">Сохранить вход</a>
         </div>
 
-        <button onclick="nextLogin()" id="next-loginn">Продолжить</button>
-        <p id="error-good">Ваш логин менее 5 <br>символов</p>
+        <button onclick="validateLogin()" id="next-loginn">Продолжить</button>
+        <p id="zero-simv">Значение Логин не <br>может быть пустым</p>
+        <p id="error-good">Ваш логин менее 5 символов</p>
         <p id="log--est">Ваш логин занят<br>Придумайте новый</p>
         <p id="englishh-error">Логин должен состоять только из<br>английского синтаксиса</p>
         <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
@@ -282,15 +282,18 @@
         
 
         <button onclick="nextLogin()" id="next-loginns">Продолжить</button>
-        <p id="error-good">Ваш логин менее 5 <br>символов</p>
+        <!-- <p id="error-good">Ваш логин менее 5 <br>символов</p>
         <p id="log--est">Ваш логин занят<br>Придумайте новый</p>
         <p id="englishh-error">Логин должен состоять только из<br>английского синтаксиса</p>
-        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p> -->
     </div> 
 </div>
 
+
+
         
     <script src="login.js">
+
 
     </script>
 </html>
