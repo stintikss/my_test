@@ -206,6 +206,30 @@
             font-size: 15px;
         }
 
+        #next-loginns {
+            background-color: #8BABEE;
+            border: none;
+            color: #FFFFFF;
+            width: 215px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        #form3 {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 315px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+
     </style>
 
 </head>
@@ -242,6 +266,22 @@
         </div>
 
         <button onclick="nextLogin()" id="next-loginn">Продолжить</button>
+        <p id="error-good">Ваш логин менее 5 <br>символов</p>
+        <p id="log--est">Ваш логин занят<br>Придумайте новый</p>
+        <p id="englishh-error">Логин должен состоять только из<br>английского синтаксиса</p>
+        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+    </div> 
+</div>
+
+<div id="form3" class="" style="display: none;">
+    <div id="reg-formss" class="reg-formss">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p id="type-log">Придумайте пароль</p>
+        <p class="your-log">Ваш пароль будет <br>использоваться для входа в аккаунт</p>
+        <input type="text" id="types-login" placeholder="Введите пароль">
+        
+
+        <button onclick="nextLogin()" id="next-loginns">Продолжить</button>
         <p id="error-good">Ваш логин менее 5 <br>символов</p>
         <p id="log--est">Ваш логин занят<br>Придумайте новый</p>
         <p id="englishh-error">Логин должен состоять только из<br>английского синтаксиса</p>
