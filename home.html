@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница HTML2</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #EAEBEE;
+            margin: 0;
+            padding: 0px;
+        }
+        .linux-icon{
+            width: 38px;
+            height: 38px;
+        }
+
+        .header {
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 48px;
+        }
+
+        .header1 {
+            justify-content: center;
+            width: 1900px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left {
+            align-items: center;
+            display: flex;
+            width: 1000px;
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .header-left p {
+            margin-left: 5px;
+        }
+
+        .search-input {
+            position: relative; 
+            margin-left: 30px;
+        }
+
+        .search-input input { 
+            align-items: center;
+            background-color: #EEEEF0;
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            width: 200px;
+            padding-left: 37px; /* Увеличиваем отступ слева для текста */
+            padding-right: 30px; /* Добавляем место справа для иконки */
+            font-family: "Poppins", sans-serif;
+            outline: none;
+        }
+
+        .lupaa {
+            position: absolute; 
+            top: 50%; 
+            left: 10px; 
+            transform: translateY(-50%); 
+            width: 20px;
+            height: 20px;
+            pointer-events: none; 
+        }
+
+        #Error-create-name {
+            display: none;
+            color: red;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #Good-create-name {
+            display: none;
+            color: #085f08;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .connect-zagl {
+            color: #000;
+        }
+
+        #type-name-block {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+        #popup {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+
+        #popas {
+
+            width: 200px;
+            background-color: #085f08;
+            display: flex;
+            justify-content: center;
+            margin-right: 750px;
+        }
+
+        #NewName {
+    user-select: none; /* Запрещает выделение текста */
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header1">
+            <div class="header-left">
+                <a href="home.html"><img class="linux-icon" src="img/free-icon-linux-2333464 (1).png" alt=""></a>
+                <a href="home.html" class="connect-zagl"><p>Connect</p></a>
+                <div class="search-input">
+                    <input type="text" placeholder="Поиск">
+                    <img class="lupaa" src="img/icons8-лупа-90.png" alt="">
+                </div>
+            </div>
+            <div class="header-right"> 
+                <img class="icon-ava" src="img/icons8-лупа-90.png" style="display: none;" alt="">
+                <p id="type-name">Задать имя</p> <!-- Этот текст виден по умолчанию -->
+            </div>
+        </div>
+    </div>
+    
+    <div id="popup" style="display: ;">
+        <div id="popas">b</div>
+    </div>
+    
+    <!-- Поле для ввода имени по умолчанию скрыто -->
+    <div id="type-name-block" style="display: none;">
+        <input id="type-name-input" type="text" placeholder="Введите имя">
+        <button id="okay">Подтвердить</button>
+        <p id="Error-create-name" style="display: none;">Введите корректное имя</p>
+        <p id="Good-create-name" style="display: none;">Вы успешно задали имя</p>
+    </div>
+        
+<script src="home.js"></script>
+<!-- <script type="module" src="main.js"></script> -->
+</body>
+</html>

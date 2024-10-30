@@ -1,0 +1,230 @@
+body {
+    background-color: #EAEBEE;
+}
+
+.login {
+    /* background-color: #EAEBEE; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.login input {
+    background-color: #E7EEFE;
+    border: #C7CDDA 1px solid;
+    width: 210px;
+    height: 25px;
+    border-radius: 3px;
+}
+
+.registration {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#toRegistration, #toLogin {
+    cursor: pointer;
+}
+
+.forms {
+    width: 300px; /* Задайте желаемую ширину */
+    height: 300px;
+    margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.login p {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.icon-img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: 10px; /* Сместите картинку вниз на нужное количество пикселей */
+}
+
+#passwordd {
+    margin-top: 5px;
+}
+
+#login-avt {
+    margin-top: 15px;
+    background-color: #4f6fafdb;
+    width: 215px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.forms1 {
+    width: 300px;
+    height: 165px;
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Добавляем направление столбцом */
+    text-align: center; /* Выравниваем текст по центру */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+#create-acc {
+    background-color: #91ce6f;
+    color: #FFFFFF;
+    border: none;
+    width: 210px;
+    height: 25px;
+    border-radius: 3px;
+}
+
+#create-acc-buis {
+    background-color: #FFFFFF;
+    color: #4464A5;
+    border: #4464A5 1px solid;
+    width: 210px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+#reg p, #politika-next-loginn, #politika-next-loginnn {
+    font-size: 11px;
+    margin-top: 12px;
+    font-family: "Montserrat", serif;
+    color: #9EA4AD;
+}
+
+#reg span, #reg-formss span {
+    color: #666D78;
+}
+
+.reg-form {
+    width: 300px; /* Задайте желаемую ширину */
+    height: 380px;
+    margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.your-log {
+    position: relative;
+    top: -10px;
+    color: #616365;
+    font-family: "Montserrat", serif;
+    font-size: 13px;
+}
+
+#type-log {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#types-login, #types-password, #types-name {
+    background-color: #F3F3F3;
+    border: #C7CDDA 1px solid;
+    width: 210px;
+    height: 25px;
+    border-radius: 3px;
+    position: relative;
+    top: -10px;
+}
+
+#saves-log {
+    color: #5d5e60;
+    font-family: "Montserrat", serif;
+    font-size: 13.5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-left: 38px;
+}
+
+#saves-log {
+    margin-left: 5px; /* Отступ от чекбокса */
+    text-align: left; /* Выровнять текст по левому краю */
+}
+
+#next-loginn {
+    background-color: #8BABEE;
+    border: none;
+    color: #FFFFFF;
+    width: 215px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+#politika-next-loginn, #politika-next-loginnn {
+    margin-top: 30px;
+}
+
+#error-good, #log--est, #englishh-error, #zero-simv, #error-good-password, #error-name {
+    display: none;
+    font-family: "Montserrat", serif;
+    color: #ff6464;
+    font-size: 15px;
+}
+
+#good-registr {
+    display: none;
+    font-family: "Montserrat", serif;
+    color: #738a6a;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#next-loginns, #next-name {
+    background-color: #8BABEE;
+    border: none;
+    color: #FFFFFF;
+    width: 215px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+#form3 {
+    width: 300px; /* Задайте желаемую ширину */
+    height: 315px;
+    margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#form4 {
+    width: 300px; /* Задайте желаемую ширину */
+    height: 315px;
+    margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
