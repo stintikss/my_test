@@ -5,24 +5,13 @@ function checkAuth() {
     // Проверяем наличие токена, логина и пароля
     if (!login || !password) {
         // Если отсутствует один из них, перенаправляем на страницу входа
-        window.location.href = '/index.html';
+        window.location.href = 'https://stintikss.github.io/my_test/index.html';
     }
 }
 
 // Вызываем функцию проверки при загрузке страницы
 window.onload = checkAuth;
 
-
-
-function checkAuth() {
-    const login = localStorage.getItem('login');
-    const password = localStorage.getItem('password');
-    if (!login || !password) {
-        window.location.href = '/index.html';
-    }
-}
-
-window.onload = checkAuth;
 
 
 
